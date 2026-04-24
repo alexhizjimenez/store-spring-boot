@@ -20,7 +20,7 @@ public class Branch {
     private UUID id;
     @Column(nullable = false, length = 150)
     private String name;
-    @Column(nullable = false, length = 255)
+    @Column(nullable = false, length = 254)
     private String address;
     @Column(nullable = false, length = 10)
     private String telephone;

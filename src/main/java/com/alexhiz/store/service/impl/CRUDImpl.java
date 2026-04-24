@@ -3,6 +3,8 @@ package com.alexhiz.store.service.impl;
 import com.alexhiz.store.exception.ModelNotFoundException;
 import com.alexhiz.store.repository.IGenericRepo;
 import com.alexhiz.store.service.ICRUD;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 
@@ -35,5 +37,10 @@ public abstract  class CRUDImpl<T, ID> implements ICRUD<T, ID> {
     public void delete(ID id) throws Exception {
         getRepo().findById(id).orElseThrow(()-> new ModelNotFoundException("No se encontro"));
         getRepo().deleteById(id);
+    }
+
+    @Override
+    public Page<T> listPage(Pageable pageable) throws Exception {
+        return getRepo().findAll(pageable);
     }
 }
