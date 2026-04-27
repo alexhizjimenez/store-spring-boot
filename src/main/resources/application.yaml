@@ -7,9 +7,13 @@ spring:
       ddl-auto: update
     show-sql: false
   datasource:
-    url: ${DB_URL}
-    username: ${DB_USER}
-    password: ${DB_PASSWORD}
+    #url: ${DB_URL}
+    #username: ${DB_USER}
+    #password: ${DB_PASSWORD}
+    url: jdbc:postgresql://localhost:5432/store
+    username: postgres
+    password: root
 server:
   port: 8080
+
 

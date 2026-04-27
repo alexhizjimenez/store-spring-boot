@@ -21,5 +21,5 @@ public class Product {
     @Column(nullable = false, length = 100)
     private String category;
     @Column(nullable = false)
-    private BigDecimal currentPrice;
+    private Double currentPrice;
 }
