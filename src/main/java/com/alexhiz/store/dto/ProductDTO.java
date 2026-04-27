@@ -15,5 +15,5 @@ public class ProductDTO {
     private UUID id;
     private String name;
     private String category;
-    private BigDecimal currentPrice;
+    private Double currentPrice;
 }
